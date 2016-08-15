@@ -118,7 +118,7 @@ write-up:访问页面，得到了base64编码的flag信息，base64解码即可
 
 Q2 BaseInjection
 这个也比较容易，是一个">
-<meta property="og:updated_time" content="2016-08-15T13:55:17.017Z">
+<meta property="og:updated_time" content="2016-08-15T14:08:46.114Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xnuca">
 <meta name="twitter:description" content="write-up
@@ -216,7 +216,7 @@ Q2 BaseInjection
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -226,7 +226,7 @@ Q2 BaseInjection
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -289,7 +289,7 @@ Q2 BaseInjection
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-08-15T19:47:58+08:00" content="2016-08-15">
               2016-08-15
             </time>
@@ -301,7 +301,7 @@ Q2 BaseInjection
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/ctf/" itemprop="url" rel="index">
@@ -554,7 +554,7 @@ Q2 BaseInjection
 <h1 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h1><ol>
 <li>1个base64的题，不算是什么难度，base64的特征比较明显，包含+ =</li>
 <li>包含多个sql注入， 其中一个无过滤，一个本地过滤，还有几个考了<code>information_schema</code>表的内容，这一块也不太熟，需要再google一下,还有<code>load data infile ** into</code> 与 <code>select * from user into outfile &quot;xx\xxx&quot; fields terminated by &#39;,&#39; lines terminated by &#39;\n&#39;</code>读写文件操作，还可以用hex来绕过一些过滤</li>
-<li>还有的是备份文件包括 .DS_Store, xxx.php.swp, xxx.php~, .svn/entries, </li>
+<li>还有的是备份文件包括 .DS_Store, xxx.php.swp, xxx.php~, .svn/entries, .git/</li>
 <li>urlopen 类似的网络请求函数，也支持file:// 这种本地协议，估计也支持ftp协议等 </li>
 <li>php 的 0e123 的比较，具体来说，就是弱类型的比较，如 array在和string做strcmp()比较时，会返回null，%00 是截断</li>
 <li>pl 的格式 </li>
@@ -652,10 +652,10 @@ Q2 BaseInjection
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -672,15 +672,15 @@ Q2 BaseInjection
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
@@ -688,8 +688,8 @@ Q2 BaseInjection
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
@@ -744,7 +744,7 @@ Q2 BaseInjection
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
